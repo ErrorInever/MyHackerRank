@@ -9,11 +9,13 @@ struct Direction {
    const std::string right = "RIGHT";
    const std::string left = "LEFT";
 };
+
 struct FieldType {
    static constexpr char princess = 'p';
    static constexpr char bot = 'm';
     __attribute__((unused)) static constexpr char field = '-';
 };
+
 void displayPathtoPrincess(const int n, FieldType& ft, std::array<int,2>& bot, const std::vector<std::string>& grid) {
    std::vector<std::string> botDirection;
    Direction direct;
@@ -85,6 +87,7 @@ void displayPathtoPrincess(const int n, FieldType& ft, std::array<int,2>& bot, c
     for (auto &value: botDirection)
         std::cout << value << '\n';
 }
+
 int main() {
    std::vector<std::string> grid; // main grid
    std::array<int, 2> bot{}; // bot coords
